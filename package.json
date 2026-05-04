@@ -1,0 +1,19 @@
+{
+  "name": "cserver2",
+  "version": "1.0.0",
+  "description": "This is my first project",
+  "license": "ISC",
+  "author": "Papon khan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "nodemon --env-file=.env server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "mongoose": "^9.6.1",
+    "nodemon": "^3.1.14"
+  }
+}
