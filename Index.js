@@ -1,8 +1,9 @@
 //Server runing and mounting application in this file
 import express from "express";
-import corsOrigin from "./src/utils/corsOrigin/corsOrigin.js";
+import corsOrigin from "./src/middleware/corsOrigin/corsOrigin.js";
 import globalError from "./src/middleware/globalError/globalError.js";
 import connectDB from "./src/config/database/database.js";
+import userRout from "./src/router/userRouter/userRouter.js";
 
 //express app start area
 const app = express();
@@ -20,7 +21,7 @@ app.use(
 );
 //Body parser area
 //all routing
-
+app.use("/api", userRout);
 //all routing
 //global error handler
 app.use(globalError);
