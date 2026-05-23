@@ -5,3 +5,4 @@ export const newUserService = async (user) => {
   const savedUser = await userObject.save();
   return savedUser;
 };
+

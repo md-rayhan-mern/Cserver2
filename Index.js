@@ -5,6 +5,7 @@ import corsOrigin from "./src/middleware/corsOrigin/corsOrigin.js";
 import globalError from "./src/middleware/globalError/globalError.js";
 import connectDB from "./src/config/database/database.js";
 import userRout from "./src/router/userRouter/userRouter.js";
+import loginRouter from "./src/router/loginRoute/loginRoute.js";
 //dns for networking
 dns.setServers(["1.1.1.1", "8.8.8.8"])
 //express app start area
@@ -24,6 +25,7 @@ app.use(
 //Body parser area
 //all routing
 app.use("/api", userRout);
+app.use("/api", loginRouter);
 //all routing
 //global error handler
 app.use(globalError);

@@ -18,6 +18,6 @@ export const getUserController = asyncRapper(async (req,res,next) => {
 export const getUserIdController = asyncRapper(async (req, res,next) => {
   const id = req.params.id;
   const user = await getUserById(id);
-  res.status(200).json(new apiResponse(200, "check", user));
+  res.status(200).json(new apiResponse(200, "user found", user));
   
 })

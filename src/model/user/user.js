@@ -34,6 +34,7 @@ const userSchema = new mongoose.Schema(
     passwordConfirm: {
       type: String,
       required: [true, "Ensure usre password"],
+      select: false,
       validate: {
         validator: function (el) {
           return el === this.password;
@@ -73,6 +74,7 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    refreshToken: { type: String , default: null, select: false},
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpire: Date,
