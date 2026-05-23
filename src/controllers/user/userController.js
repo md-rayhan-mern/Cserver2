@@ -11,13 +11,13 @@ export const createUserController = asyncRapper(async (req, res, next) => {
 });
 
 export const getUserController = asyncRapper(async (req,res,next) => {
-  const allUser = await getUserService()
-  res.status(200).json(new apiResponse(200, "user found", allUser))
+  const allUser = await getUserService();
+  res.status(200).json(new apiResponse(200, "user found", allUser));
 });
 
 export const getUserIdController = asyncRapper(async (req, res,next) => {
-  const id = req.params.id
-  const user = await getUserById(id)
-  res.status(200).json(new apiResponse(200, "check", user))
+  const id = req.params.id;
+  const user = await getUserById(id);
+  res.status(200).json(new apiResponse(200, "check", user));
   
 })
