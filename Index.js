@@ -6,6 +6,7 @@ import globalError from "./src/middleware/globalError/globalError.js";
 import connectDB from "./src/config/database/database.js";
 import userRout from "./src/router/userRouter/userRouter.js";
 import loginRouter from "./src/router/loginRoute/loginRoute.js";
+import accessTokenRoute from "./src/router/createTokenRouter/createRoute.js"
 //dns for networking
 dns.setServers(["1.1.1.1", "8.8.8.8"])
 //express app start area
@@ -26,6 +27,7 @@ app.use(
 //all routing
 app.use("/api", userRout);
 app.use("/api", loginRouter);
+app.use("/api", accessTokenRoute);
 //all routing
 //global error handler
 app.use(globalError);
